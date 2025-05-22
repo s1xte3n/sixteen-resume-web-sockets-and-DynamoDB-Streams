@@ -2,7 +2,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     const counterElement = document.getElementById("visitor-count");
 
     try {
-        const response = await fetch("https://YOUR_API_ID.execute-api.YOUR_REGION.amazonaws.com/Prod/visitor-count");
+        const response = await fetch("https://3rajlf3xvd.execute-api.eu-north-1.amazonaws.com/Prod/visitor-count");
         if (!response.ok) {
             throw new Error(`HTTP error! Status: ${response.status}`);
         }
