@@ -12,7 +12,7 @@ jobs:
 
     env:
       AWS_REGION: eu-north-1
-      S3_BUCKET: resumestack-resumewebsitebucketed717468-xjn9zf5mndlk
+      S3_BUCKET: resumestack-resumewebsitebucketed717468-z6qfbqse2nnd
 
     steps:
       - name: Checkout source code
