@@ -44,7 +44,7 @@ class ResumeStack(Stack):
         )
 
         # 4. DynamoDB Table
-        table = ddb.Table(self, "VisitorCountTable",
+        table = ddb.Table(self, "VisitorCount",
             partition_key={"name": "id", "type": ddb.AttributeType.STRING},
             removal_policy=RemovalPolicy.DESTROY
         )
