@@ -53,7 +53,7 @@ class ResumeStack(Stack):
         visitor_fn = _lambda.Function(self, "VisitorCounterFunction",
             runtime=_lambda.Runtime.PYTHON_3_10,
             handler="index.lambda_handler",
-            code=_lambda.Code.from_asset("visitor_counter"),
+            code=_lambda.Code.from_asset("visitorCount"),
             environment={"TABLE_NAME": table.table_name}
         )
 
