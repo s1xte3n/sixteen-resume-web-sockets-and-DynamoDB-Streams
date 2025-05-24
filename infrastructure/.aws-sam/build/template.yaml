@@ -1,0 +1,54 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Transform: AWS::Serverless-2016-10-31
+Description: Visitor Counter API
+Globals:
+  Function:
+    Timeout: 10
+    Runtime: python3.12
+Resources:
+  VisitorTable:
+    Type: AWS::DynamoDB::Table
+    Properties:
+      TableName: VisitorCount
+      BillingMode: PAY_PER_REQUEST
+      AttributeDefinitions:
+      - AttributeName: id
+        AttributeType: S
+      KeySchema:
+      - AttributeName: id
+        KeyType: HASH
+  VisitorFunction:
+    Type: AWS::Serverless::Function
+    Properties:
+      CodeUri: VisitorFunction
+      Handler: app.lambda_handler
+      Runtime: python3.12
+      Environment:
+        Variables:
+          TABLE_NAME: VisitorCount
+      Policies:
+      - DynamoDBCrudPolicy:
+          TableName: VisitorCount
+      Events:
+        VisitorCounterAPI:
+          Type: Api
+          Properties:
+            Path: /visitor-count
+            Method: GET
+            RestApiId:
+              Ref: VisitorApi
+    Metadata:
+      SamResourceId: VisitorFunction
+  VisitorApi:
+    Type: AWS::Serverless::Api
+    Properties:
+      StageName: Prod
+      Cors:
+        AllowMethods: '''GET'''
+        AllowHeaders: '''*'''
+        AllowOrigin: '''*'''
+Outputs:
+  ApiUrl:
+    Description: Visitor Counter API URL
+    Value:
+      Fn::Sub: https://${VisitorApi}.execute-api.${AWS::Region}.amazonaws.com/Prod/visitor-count
