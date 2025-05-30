@@ -1,0 +1,162 @@
+{
+  "version": "41.0.0",
+  "artifacts": {
+    "WebsocketResumeStack.assets": {
+      "type": "cdk:asset-manifest",
+      "properties": {
+        "file": "WebsocketResumeStack.assets.json",
+        "requiresBootstrapStackVersion": 6,
+        "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version"
+      }
+    },
+    "WebsocketResumeStack": {
+      "type": "aws:cloudformation:stack",
+      "environment": "aws://768859352913/eu-north-1",
+      "properties": {
+        "templateFile": "WebsocketResumeStack.template.json",
+        "terminationProtection": false,
+        "validateOnSynth": false,
+        "assumeRoleArn": "arn:${AWS::Partition}:iam::768859352913:role/cdk-hnb659fds-deploy-role-768859352913-eu-north-1",
+        "cloudFormationExecutionRoleArn": "arn:${AWS::Partition}:iam::768859352913:role/cdk-hnb659fds-cfn-exec-role-768859352913-eu-north-1",
+        "stackTemplateAssetObjectUrl": "s3://cdk-hnb659fds-assets-768859352913-eu-north-1/c3f1c74972030235c2ffc290a60d9364d6341d76dbd56ce2a3ee959da1fc3d55.json",
+        "requiresBootstrapStackVersion": 6,
+        "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version",
+        "additionalDependencies": [
+          "WebsocketResumeStack.assets"
+        ],
+        "lookupRole": {
+          "arn": "arn:${AWS::Partition}:iam::768859352913:role/cdk-hnb659fds-lookup-role-768859352913-eu-north-1",
+          "requiresBootstrapStackVersion": 8,
+          "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version"
+        }
+      },
+      "dependencies": [
+        "WebsocketResumeStack.assets"
+      ],
+      "metadata": {
+        "/WebsocketResumeStack/ConnectionIDs/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ConnectionIDs9C830531"
+          }
+        ],
+        "/WebsocketResumeStack/VisitorCount/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "VisitorCountD9DF0033"
+          }
+        ],
+        "/WebsocketResumeStack/DBUpdater/ServiceRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "DBUpdaterServiceRole3E2CEF40"
+          }
+        ],
+        "/WebsocketResumeStack/DBUpdater/ServiceRole/DefaultPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "DBUpdaterServiceRoleDefaultPolicy4AA348F6"
+          }
+        ],
+        "/WebsocketResumeStack/DBUpdater/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "DBUpdater5B81DE90"
+          }
+        ],
+        "/WebsocketResumeStack/DBUpdater/InvokeByAPIGateway": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "DBUpdaterInvokeByAPIGatewayBBA7D8D3"
+          }
+        ],
+        "/WebsocketResumeStack/WebSocketAPI": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "WebSocketAPI"
+          }
+        ],
+        "/WebsocketResumeStack/ConnectIntegration": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ConnectIntegration"
+          }
+        ],
+        "/WebsocketResumeStack/DisconnectIntegration": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "DisconnectIntegration"
+          }
+        ],
+        "/WebsocketResumeStack/ConnectRoute": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ConnectRoute"
+          }
+        ],
+        "/WebsocketResumeStack/DisconnectRoute": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "DisconnectRoute"
+          }
+        ],
+        "/WebsocketResumeStack/WebSocketStage": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "WebSocketStage"
+          }
+        ],
+        "/WebsocketResumeStack/DBStreamProcessor/ServiceRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "DBStreamProcessorServiceRole6A62E0D2"
+          }
+        ],
+        "/WebsocketResumeStack/DBStreamProcessor/ServiceRole/DefaultPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "DBStreamProcessorServiceRoleDefaultPolicyAC2371C6"
+          }
+        ],
+        "/WebsocketResumeStack/DBStreamProcessor/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "DBStreamProcessor455D9380"
+          }
+        ],
+        "/WebsocketResumeStack/DBStreamProcessor/DynamoDBEventSource:WebsocketResumeStackVisitorCount7738E7B7/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "DBStreamProcessorDynamoDBEventSourceWebsocketResumeStackVisitorCount7738E7B7505A5915"
+          }
+        ],
+        "/WebsocketResumeStack/CDKMetadata/Default": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CDKMetadata"
+          }
+        ],
+        "/WebsocketResumeStack/BootstrapVersion": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "BootstrapVersion"
+          }
+        ],
+        "/WebsocketResumeStack/CheckBootstrapVersion": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CheckBootstrapVersion"
+          }
+        ]
+      },
+      "displayName": "WebsocketResumeStack"
+    },
+    "Tree": {
+      "type": "cdk:tree",
+      "properties": {
+        "file": "tree.json"
+      }
+    }
+  },
+  "minimumCliVersion": "2.1005.0"
+}

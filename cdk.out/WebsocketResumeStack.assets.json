@@ -1,0 +1,51 @@
+{
+  "version": "41.0.0",
+  "files": {
+    "5cb12e6f0970f7046f47caaf18fc6fdcd9d18bb7fcc02b96f05db7f39f8da9db": {
+      "displayName": "DBUpdater/Code",
+      "source": {
+        "path": "asset.5cb12e6f0970f7046f47caaf18fc6fdcd9d18bb7fcc02b96f05db7f39f8da9db",
+        "packaging": "zip"
+      },
+      "destinations": {
+        "768859352913-eu-north-1": {
+          "bucketName": "cdk-hnb659fds-assets-768859352913-eu-north-1",
+          "objectKey": "5cb12e6f0970f7046f47caaf18fc6fdcd9d18bb7fcc02b96f05db7f39f8da9db.zip",
+          "region": "eu-north-1",
+          "assumeRoleArn": "arn:${AWS::Partition}:iam::768859352913:role/cdk-hnb659fds-file-publishing-role-768859352913-eu-north-1"
+        }
+      }
+    },
+    "8f074d8a186faac3100def923b134661f057febab30fef1411c79d72249bdbaf": {
+      "displayName": "DBStreamProcessor/Code",
+      "source": {
+        "path": "asset.8f074d8a186faac3100def923b134661f057febab30fef1411c79d72249bdbaf",
+        "packaging": "zip"
+      },
+      "destinations": {
+        "768859352913-eu-north-1": {
+          "bucketName": "cdk-hnb659fds-assets-768859352913-eu-north-1",
+          "objectKey": "8f074d8a186faac3100def923b134661f057febab30fef1411c79d72249bdbaf.zip",
+          "region": "eu-north-1",
+          "assumeRoleArn": "arn:${AWS::Partition}:iam::768859352913:role/cdk-hnb659fds-file-publishing-role-768859352913-eu-north-1"
+        }
+      }
+    },
+    "c3f1c74972030235c2ffc290a60d9364d6341d76dbd56ce2a3ee959da1fc3d55": {
+      "displayName": "WebsocketResumeStack Template",
+      "source": {
+        "path": "WebsocketResumeStack.template.json",
+        "packaging": "file"
+      },
+      "destinations": {
+        "768859352913-eu-north-1": {
+          "bucketName": "cdk-hnb659fds-assets-768859352913-eu-north-1",
+          "objectKey": "c3f1c74972030235c2ffc290a60d9364d6341d76dbd56ce2a3ee959da1fc3d55.json",
+          "region": "eu-north-1",
+          "assumeRoleArn": "arn:${AWS::Partition}:iam::768859352913:role/cdk-hnb659fds-file-publishing-role-768859352913-eu-north-1"
+        }
+      }
+    }
+  },
+  "dockerImages": {}
+}

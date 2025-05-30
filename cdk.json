@@ -1,0 +1,7 @@
+{
+    "app": "node bin/websocket-resume.js",
+    "context": {
+      "@aws-cdk/core:newStyleStackSynthesis": true
+    }
+  }
+  
